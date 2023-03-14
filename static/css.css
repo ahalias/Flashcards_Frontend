@@ -1,0 +1,72 @@
+body {
+    background: white scroll no-repeat url("world.png");
+    background-position: 0 40%;
+    background-size: 100%;
+    font-family: Comic Sans MS, sans-serif;
+    font-weight: bolder;
+}
+
+
+.grid-container  {
+    display: grid;
+    grid-template-areas:
+    'header'
+    'main main main main main main main main main';
+    grid-template-columns: repeat(3, 15em);
+    grid-template-rows: repeat(3, 15em);
+    justify-content: center;
+    text-align: justify;
+    margin: 0 20em 0 20em;
+}
+.grid-header {
+    text-align: center;
+    color: #4F3D3D;
+    margin: 1.5em .5em .5em .5em;
+    line-height: 2em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+
+.div-area {
+
+}
+
+.card {
+    height: 215px;
+    width: 215px;
+    background:#FACFAD;
+    color: #3E4E50;
+    margin: .5em .5em .5em .5em;
+    line-height: 4em;
+    border-radius: 10px;
+    font-size: 24px;
+    transition: 2s ease-out;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+    background-color: #ADD8FA;
+}
+
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 4em;
+    border-radius: 10px;
+    font-size: 24px;
+    backface-visibility: hidden;
+}
+
+.front {
+}
+
+.back {
+    transform: rotateY(180deg);
+}
